@@ -1,0 +1,64 @@
+html {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+body {
+	margin: 0;
+}
+
+div, section, header, footer, p, h1, h2 {
+	box-sizing: border-box;
+}
+
+a {
+	color: royalblue;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.global-width {
+    max-width:620px;
+    margin:0 auto;
+    padding: 0 1rem;  /* 16px */
+}
+
+.scroll-graphic{
+    position:sticky;
+    top:0;            /* position sticky 와 top 0 을 지정하면 top 0 이 되는 순간 이미지가 고정 */
+    height: 100vh;    /* 높이를 지정해줘야 높이만큼 스크롤이 가능하다 */
+}
+
+.graphic-item {
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    opacity:0;
+}
+
+.visible {
+    opacity: 1; /* 순서 주의 */
+    transition: 1s;
+}
+
+.scene-img {
+    max-height: 100vh;   /* 화면 크기를 줄일때 이미지들이 위로 올라오지 않게 높이 제한 */
+}
+
+.scroll-text {
+    position: relative; /* z-index 적용이 안되는 이유: position: static는 "left, top, z-index, 등의 모든 위치 지정 명령을 무시"를 의미합니다. */
+}
+
+.step {
+    margin-bottom: 60vh;
+    background: rgba(255,255,255, 0.8);
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; /* https://getcssscan.com/css-box-shadow-examples */
+}
